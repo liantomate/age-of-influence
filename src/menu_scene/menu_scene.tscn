@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c7qm2hvjqnjik"]
+
+[ext_resource type="Script" uid="uid://b7qm7grpr6iwc" path="res://src/root_scene/scene_component.gd" id="1_o1yh8"]
+
+[node name="MenuScene" type="Node" unique_id=387910152]
+
+[node name="SceneComponent" type="Node" parent="." unique_id=323914909]
+script = ExtResource("1_o1yh8")
+scene_type = 1
+
+[node name="TestLabel" type="Label" parent="." unique_id=437295622]
+anchors_preset = -1
+anchor_left = 0.23090278
+anchor_top = 0.35570988
+anchor_right = 0.7578125
+anchor_bottom = 0.5300926
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "MENU"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cks7qo43w6s05"]
+
+[ext_resource type="Script" uid="uid://cw1njyxaerkvf" path="res://src/root_scene/root_scene.gd" id="1_a1wh6"]
+[ext_resource type="Script" uid="uid://cec7bs43d60ec" path="res://src/root_scene/bridge_layer.gd" id="2_h5y2w"]
+
+[node name="RootScene" type="Node" unique_id=1710428964 node_paths=PackedStringArray("ui_layer", "worldspace_layer", "bridge_layer")]
+script = ExtResource("1_a1wh6")
+ui_layer = NodePath("UILayer")
+worldspace_layer = NodePath("WorldspaceLayer")
+bridge_layer = NodePath("BridgeLayer")
+default_scene = "res://src/menu_scene/menu_scene.tscn"
+
+[node name="UILayer" type="Node" parent="." unique_id=261971755]
+
+[node name="WorldspaceLayer" type="Node" parent="." unique_id=1025609082]
+
+[node name="BridgeLayer" type="Node" parent="." unique_id=966008916]
+script = ExtResource("2_h5y2w")

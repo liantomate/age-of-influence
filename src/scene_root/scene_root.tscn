@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://cks7qo43w6s05"]
-
-[node name="Scene Root" type="Node" unique_id=1710428964]
-
-[node name="UI Layer" type="Node" parent="." unique_id=261971755]
-
-[node name="Worldspace Layer" type="Node" parent="." unique_id=1025609082]
-
-[node name="Bridge Layer" type="Node" parent="." unique_id=966008916]

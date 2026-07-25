@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://c3twj5el7fc7x"]
+
+[ext_resource type="Script" uid="uid://b7qm7grpr6iwc" path="res://src/root_scene/scene_component.gd" id="1_fd028"]
+[ext_resource type="Script" uid="uid://bdvobc68i5yxd" path="res://src/level_generation/level_generation_bridge.gd" id="2_sbp08"]
+[ext_resource type="Texture2D" uid="uid://ciekrvovwu87n" path="res://icon.svg" id="3_0sb4x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sbp08"]
+
+[node name="LevelGenerationUIScene" type="Node" unique_id=676957252]
+
+[node name="SceneComponent" type="Node" parent="." unique_id=952494368]
+script = ExtResource("1_fd028")
+bridge_script = ExtResource("2_sbp08")
+metadata/_custom_type_script = "uid://b7qm7grpr6iwc"
+
+[node name="UIContainer" type="VBoxContainer" parent="." unique_id=1939864287]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 1
+
+[node name="ExitContainer" type="HBoxContainer" parent="UIContainer" unique_id=1236226939]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ExitPanel" type="Panel" parent="UIContainer/ExitContainer" unique_id=1624740467]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SceneContainer" type="HBoxContainer" parent="UIContainer" unique_id=834584274]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 10.0
+
+[node name="SettingsMargin" type="MarginContainer" parent="UIContainer/SceneContainer" unique_id=1270282406]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+theme_override_constants/margin_left = 10
+
+[node name="SettingsPanel" type="Panel" parent="UIContainer/SceneContainer/SettingsMargin" unique_id=1972226756]
+layout_mode = 2
+
+[node name="SettingsInnerMargin" type="MarginContainer" parent="UIContainer/SceneContainer/SettingsMargin" unique_id=133854772]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UIContainer/SceneContainer/SettingsMargin/SettingsInnerMargin" unique_id=1164457982]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="SettingsContainer" type="VBoxContainer" parent="UIContainer/SceneContainer/SettingsMargin/SettingsInnerMargin/ScrollContainer" unique_id=180744734]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LevelNameLabel" type="Label" parent="UIContainer/SceneContainer/SettingsMargin/SettingsInnerMargin/ScrollContainer/SettingsContainer" unique_id=745922661]
+layout_mode = 2
+text = "Enter Level Name:"
+
+[node name="LevelNameInput" type="LineEdit" parent="UIContainer/SceneContainer/SettingsMargin/SettingsInnerMargin/ScrollContainer/SettingsContainer" unique_id=408705537]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sbp08")
+text = "Untitled"
+placeholder_text = "Enter level name..."
+max_length = 20
+context_menu_enabled = false
+emoji_menu_enabled = false
+select_all_on_focus = true
+caret_blink = true
+
+[node name="LevelSeedLabel" type="Label" parent="UIContainer/SceneContainer/SettingsMargin/SettingsInnerMargin/ScrollContainer/SettingsContainer" unique_id=1089252011]
+layout_mode = 2
+text = "Enter Level Seed:"
+
+[node name="LevelSeedInput" type="LineEdit" parent="UIContainer/SceneContainer/SettingsMargin/SettingsInnerMargin/ScrollContainer/SettingsContainer" unique_id=1461352370]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sbp08")
+text = "0"
+placeholder_text = "Enter numerical seed..."
+max_length = 20
+context_menu_enabled = false
+emoji_menu_enabled = false
+select_all_on_focus = true
+caret_blink = true
+
+[node name="PreviewMargin" type="MarginContainer" parent="UIContainer/SceneContainer" unique_id=1344701869]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_right = 10
+
+[node name="PreviewPanel" type="Panel" parent="UIContainer/SceneContainer/PreviewMargin" unique_id=1516096517]
+layout_mode = 2
+
+[node name="PreviewInnerMargin" type="MarginContainer" parent="UIContainer/SceneContainer/PreviewMargin" unique_id=1696725478]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PreviewContainer" type="VBoxContainer" parent="UIContainer/SceneContainer/PreviewMargin/PreviewInnerMargin" unique_id=819889555]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MapPreviewImage" type="TextureRect" parent="UIContainer/SceneContainer/PreviewMargin/PreviewInnerMargin/PreviewContainer" unique_id=871046410]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 8.0
+texture = ExtResource("3_0sb4x")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ActionContainer" type="HBoxContainer" parent="UIContainer/SceneContainer/PreviewMargin/PreviewInnerMargin/PreviewContainer" unique_id=583532152]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RegenerateButton" type="Button" parent="UIContainer/SceneContainer/PreviewMargin/PreviewInnerMargin/PreviewContainer/ActionContainer" unique_id=1941549774]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Regenerate Preview"
+
+[node name="GenerateButton" type="Button" parent="UIContainer/SceneContainer/PreviewMargin/PreviewInnerMargin/PreviewContainer/ActionContainer" unique_id=1088020233]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Generate Level"

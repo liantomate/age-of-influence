@@ -10,6 +10,8 @@ func _ready() -> void:
 	var bridge_instance = SceneManager.bridge_layer.get_bridge_from_scene(get_parent())
 	if bridge_instance is LevelGenerationBridge:
 		bridge = bridge_instance
+	
+	bridge.connect("level_generation_requested", generate_level)
 
 '''
 This function combines private functions of this module to generate the level from

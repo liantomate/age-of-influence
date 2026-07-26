@@ -2,11 +2,13 @@
 
 [ext_resource type="Script" uid="uid://b7qm7grpr6iwc" path="res://src/root_scene/scene_component.gd" id="1_88kq5"]
 [ext_resource type="Script" uid="uid://b5kl8yssbgb4o" path="res://src/level_generation/level_generation_scene/level_generator.gd" id="2_exk1o"]
+[ext_resource type="Script" uid="uid://bdvobc68i5yxd" path="res://src/level_generation/level_generation_bridge.gd" id="2_yn731"]
 
 [node name="LevelGenerationScene" type="Node" unique_id=373022343]
 
 [node name="SceneComponent" type="Node" parent="." unique_id=1565083202]
 script = ExtResource("1_88kq5")
+bridge_script = ExtResource("2_yn731")
 
 [node name="LevelGenerator" type="Node" parent="." unique_id=907602002]
 script = ExtResource("2_exk1o")

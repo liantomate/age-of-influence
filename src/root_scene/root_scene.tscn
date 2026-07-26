@@ -8,7 +8,7 @@ script = ExtResource("1_a1wh6")
 ui_layer = NodePath("UILayer")
 worldspace_layer = NodePath("WorldspaceLayer")
 bridge_layer = NodePath("BridgeLayer")
-default_scene = "res://src/menu_scene/menu_scene.tscn"
+default_scenes = Array[String](["res://src/level_generation/level_generation_ui_scene/level_generation_ui_scene.tscn", "res://src/level_generation/level_generation_scene/level_generation_scene.tscn"])
 
 [node name="UILayer" type="Node" parent="." unique_id=261971755]
 
